@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: rgba(0,0,0,0.5) url(assets/bg-img.jpg);
+    background-blend-mode: darken;
+}
+
+/* body{
+    background: #000;
+}
+body::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: url(./assets/bg-img.jpg) ;
+    background-position: center;
+} */
+
+nav{
+    position: fixed;
+    z-index: 1;
+    padding: 1.5rem 4rem;
+}
+
+nav>a>img{
+    width: 8rem;
+    margin-left: 5rem;
+    /* margin-top: 1rem; */
+}
+
+
+.form-wrapper{
+    width: 28rem;
+    padding: 4rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%) ;
+    border-radius: .25rem;
+    
+}
+
+.form-wrapper>h1{
+    color: white;
+    font-size: 2rem;
+}
+form{
+    margin: 1.5rem 0 1.2rem;
+}
+.form-control{
+    position: relative;
+    height: 4rem;
+    margin-bottom: 1.5rem ;
+}
+.form-control>input{
+    /* height: 4rem; */
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .03);
+    outline: none;
+    border: 1px solid #8c8c8c;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .25rem;
+    padding: 0 1.25rem;
+    padding-top: 1rem;
+    margin: 0;
+}
+
+.form-control input:is(:focus, :valid){
+    outline:  2px solid #fff;
+    outline-offset: .1rem;
+}
+
+.form-control label{
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    color: #bbb;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+
+}
+.form-control input:is(:focus, :valid) ~label{
+    /* color: red; */
+    font-size: .75rem;
+    transform: translateY(-130%);
+    
+}
+
+.btn-signIn{
+    width: 100%;
+    padding: .625rem 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: .25rem;
+    background: #e50914;
+    transition: all .2s;
+}
+.btn-signIn:hover{
+    background: #c40812;
+}
+.text-or{
+    text-align: center;
+    margin: 1rem 0;
+}
+.btn-code{
+    width: 100%;
+    padding: .625rem 0;
+    border: none;
+    border-radius: .25rem;
+    background: rgba(255, 255, 255, .15);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+
+}
+.btn-code:hover{
+    background: rgba(255, 255, 255, .1);
+}
+
+.text-fpwd {
+    text-align: center;
+    margin: 1rem 0;
+}
+.text-fpwd>a{
+    color: #fff;
+}
+
+.form-wrapper :where(label, p, small, a){
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.remember {
+    display: flex;
+    gap: .3rem;
+}
+.remember>label{
+    color: #fff;
+}
+
+.form-wrapper p a{
+    color: #fff;
+}
+.form-wrapper small{
+    display: block;
+    margin-top: 1.5rem;
+    color: #b3b3b3ac;
+    line-height: 1.2rem;
+    
+}
+.form-wrapper small a{
+    color: #0071eb;
+}
+
+.form-wrapper a:hover{
+    text-decoration: underline;
+    
+}
+
+@media (max-width: 740px){
+    body{
+        background: black;
+    }
+    nav, .form-wrapper{
+        padding: 1.25rem;
+    }
+    nav>a>img{
+        padding: 0;
+        margin: .5rem  ;
+        width: 6rem;
+    }
+    .form-wrapper{
+        width: 100%;
+        padding: 0 4rem;
+    }
+}

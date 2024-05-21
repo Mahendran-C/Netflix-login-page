@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix SignIn Page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/netflix_logo_icon_170919.svg"
+    />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav>
+        <a href="#">
+            <img src="./assets/logo.svg" alt="netflix-logo">
+        </a>
+    </nav>
+    <main>
+        <div class="form-wrapper">
+            <h1>Sign In</h1>
+            <form action="#">
+                <div class="form-control">
+                    <input type="text" required>
+                    <label >Email or phone number</label>
+                </div>
+                <div class="form-control">
+                    <input type="password" required>
+                    <label >Password</label>
+                </div>
+                
+                <button class="btn-signIn">Sign In</button>
+                <p class="text-or">OR</p>
+                <button class="btn-code">Use a sign-in code</button>
+                <p class="text-fpwd"><a href="#">Forget password?</a></p>
+                <div class="remember">
+                    <input type="checkbox"  id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+            </form>
+            <p class="text-signUp">New to Netflix? <a href="#">Sign up now.</a></p>
+            <small>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">learn more.</a></small>
+            
+        </div>
+    </main>
+    
+</body>
+</html>
